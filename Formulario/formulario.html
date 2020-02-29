@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Retaged</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="centrar">
+            <a href="index.html"><img class="titulo" src="img/logo.png" alt="Logo" id="logo" /></a>
+        </div>
+        <div class="iconos">
+            <a href="#"><img class="ico" src="img/lupa.png" alt="lupa" /></a>
+            <a href="formulario.html"><img class="ico" src="img/user.png" alt="user" /></a>
+            <a href="#"><img class="ico" src="img/loves.png" alt="loves" /></a>
+            <a href="#"><img class="ico" src="img/filters.png" alt="filters" /></a>
+        </div>
+        <br>
+        <br>
+        <div class="centrar">
+            <form action="#" method="post" id="IniciarSesion">
+                <fieldset>
+                    <legend><b>Iniciar sesión</b> </legend>
+                    <br>
+                    <div class="grid">
+                        <div class="grid-label"><label for="IniciarSesionTelefonoEmail">E-mail o Teléfono*</label></div>
+                        <div><input type="text" id="IniciarSesionTelefonoEmail" name="IniciarSesionTelefonoEmail" required /></div>
+                        <div class="grid-label"><label for="IniciarSesionPassword">Password*</label></div>
+                        <div><input type="password" id="IniciarSesionPassword" name="IniciarSesionPassword" required /><input type="checkbox" onclick="showPassword(this)">Mostrar Password</div>
+                        <div class="grid-button"><button type="submit">Iniciar Sesión</button></div>
+                    </div>
+                    <div id="IniciarSesionResultado"></div>
+                </fieldset>
+            </form>
+            <button class="cerrar-sesion" id="CerrarSesion">Cerrar Sesión</button>
+            <br>
+            <br>
+            <form action="#" method="post" id="Formulario">
+                <fieldset>
+                    <legend><b>Formulario de registro</b> </legend>
+                    <br>
+                    <div class="grid">
+                        <div class="grid-label"><label for="FormularioNombre">Nombre*</label></div>
+                        <div><input type="text" id="FormularioNombre" name="FormularioNombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required/></div>
+                        <div class="grid-label"><label for="FormularioApellido">Apellido*</label></div>
+                        <div><input type="text" id="FormularioApellido" name="FormularioApellido" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" required/></div>
+                        <div class="grid-label"><label for="FormularioTelefonoEmail">E-mail o Teléfono*</label></div>
+                        <div><input type="text" id="FormularioTelefonoEmail" name="FormularioTelefonoEmail" required/></div>
+                        <div class="grid-label"><label for="FormularioPassword">Password*</label></div>
+                        <div><input type="password" id="FormularioPassword" name="FormularioPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@\[-`{-~]).{8,64}$" required /></div>
+                        <div class="grid-label"><label for="FormularioPasswordDos">Repite Password*</label></div>
+                        <div><input type="password" id="FormularioPasswordDos" name="FormularioPasswordDos" required /></div>
+                        <div class="grid-label"><label for="FormularioFecha">Fecha de nacimiento</label></div>
+                        <div><input type="date" id="FormularioFecha" name="FormularioFecha" /></div>
+                        <div class="grid-button"><button type="submit">Registrarse</button></div>
+                    </div>
+                    <div id="FormularioResultado" class="alert-success"></div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div id="barraaceptacion" style="display: block;">
+        <div class="inner">
+            Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+            <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> |
+            <a href="http://politicadecookies.com" target="_blank" class="info">Más información</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="validacion.js"></script>
+</body>
+
+</html>

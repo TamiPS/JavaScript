@@ -1,0 +1,18 @@
+  var entra = false;
+  if(days<0){
+    days = days * -1;
+    entra = true;
+  }
+  var i = 0;
+  var FechaIn = new Date(startdate);
+  while(i<days){
+    if(entra){
+      FechaIn = new Date(FechaIn.getTime()-MILI);
+    }else{
+      FechaIn = new Date(FechaIn.getTime()+MILI);
+    }
+    if(FechaIn.getDay() != 6 && FechaIn.getDay()!=0){
+      i++;
+    }
+  }
+  return new Date(FechaIn.getTime()).toLocaleDateString("es-ES");
